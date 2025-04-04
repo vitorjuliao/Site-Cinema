@@ -1,0 +1,167 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de cores */
+:root {
+    --vermelho: #d32f2f;
+    --preto: #212121;
+    --branco: #ffffff;
+    --cor-titulo-cinema: #ffffff; /* Cor para o título "Cinema em Cartaz" */
+    --cor-link-inicio: #ffffff; /* Cor para o link "Início" */
+    --cor-link-sobre: #ffffff; /* Cor para o link "Sobre" */
+    --cor-link-contato: #ffffff; /* Cor para o link "Contato" */
+    --cor-titulo-filmes: #ffffff; /* Cor para o título "Filmes em Cartaz" */
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'DM Serif Display', serif; /* Usando uma fonte delicada */
+    background-color: var(--preto);
+    color: var(--branco);
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--vermelho);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo do título "Cinema em Cartaz" */
+.titulo-cinema {
+    color: var(--cor-titulo-cinema); /* Cor específica para o título "Cinema em Cartaz" */
+}
+
+/* Links do menu */
+nav a {
+    color: var(--branco); /* Cor padrão para os links */
+    text-decoration: none; /* Removendo o sublinhado */
+}
+
+.link-inicio {
+    color: var(--cor-link-inicio); /* Cor específica para o link "Início" */
+}
+
+.link-sobre {
+    color: var(--cor-link-sobre); /* Cor específica para o link "Sobre" */
+}
+
+.link-contato {
+    color: var(--cor-link-contato); /* Cor específica para o link "Contato" */
+}
+
+/* Estilo do título "Filmes em Cartaz" */
+.titulo-filmes {
+    font-size: 3rem; /* Tamanho da fonte */
+    color: var(--cor-titulo-filmes); /* Cor específica para o título "Filmes em Cartaz" */
+    margin-bottom:0px; /* Espaçamento abaixo do título */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* Centralizando o carrossel */
+.filmes-em-cartaz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Estilizando o carrossel */
+.filmes-wrapper {
+    overflow: hidden;
+    max-width: 1600px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.filmes-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+/* Filmes */
+.filme {
+    min-width: 300px;
+    text-align: center;
+}
+
+.filme img {
+    width: 100%;
+    height: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 15px;
+    border: none;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+/* Posicionando as setas */
+.setas-container {
+    position: absolute;
+    width: 190%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Deixa a seta da esquerda perto do primeiro filme */
+.seta-esquerda {
+    position: absolute;
+    left: -5000px; /* Ajustado para ficar ao lado do primeiro filme */
+}
+
+/* Deixa a seta da direita perto do último filme */
+.seta-direita {
+    position: absolute;
+    right: -60px; /* Ajustado para ficar ao lado do último filme */
+}
+
+.seta {
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--branco);
+    pointer-events: all;
+}
+
+.seta:hover {
+    color: var(--vermelho);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--vermelho);
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
