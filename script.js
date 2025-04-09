@@ -1,24 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".filmes-container");
+    const filmes = document.querySelectorAll(".filme");
     const btnEsquerda = document.querySelector(".esquerda");
     const btnDireita = document.querySelector(".direita");
 
-    let deslocamento = 0;
-    const larguraFilme = 300; // Largura aproximada de cada filme + gap
-    const totalFilmes = container.childElementCount;
-    const filmesVisiveis = 3;
+    const larguraFilme = 320;
+    let index = 0;
+
+    // Clona os filmes para criar o loop
+    filmes.forEach(filme => {
+        const clone = filme.cloneNode(true);
+        container.appendChild(clone);
+    });
+
+    function moverParaIndex(novoIndex) {
+        container.style.transition = "transform 0.5s ease-in-out";
+        container.style.transform = `translateX(-${novoIndex * larguraFilme}px)`;
+        index = novoIndex;
+    }
 
     btnDireita.addEventListener("click", () => {
-        if (deslocamento > -((totalFilmes - filmesVisiveis) * larguraFilme)) {
-            deslocamento -= larguraFilme;
-            container.style.transform = `translateX(${deslocamento}px)`;
+        if (index >= container.children.length / 2) {
+            container.style.transition = "none";
+            container.style.transform = `translateX(0px)`;
+            index = 0;
+            setTimeout(() => moverParaIndex(1), 10);
+        } else {
+            moverParaIndex(index + 1);
         }
     });
 
     btnEsquerda.addEventListener("click", () => {
-        if (deslocamento < 0) {
-            deslocamento += larguraFilme;
-            container.style.transform = `translateX(${deslocamento}px)`;
+        if (index <= 0) {
+            index = container.children.length / 2;
+            container.style.transition = "none";
+            container.style.transform = `translateX(-${index * larguraFilme}px)`;
+            setTimeout(() => moverParaIndex(index - 1), 10);
+        } else {
+            moverParaIndex(index - 1);
         }
     });
 });
