@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema - Filmes em Cartaz</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinema - Filmes em Cartaz</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1 class="titulo-cinema">Cinema em Cartaz</h1>
+  <header>
+    <div class="logo">
+      <h1 class="titulo-cinema">Cinema em Cartaz</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a class="link-inicio" href="#">Início</a></li>
+        <li><a class="link-sobre" href="#">Sobre</a></li>
+        <li><a class="link-contato" href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filmes-em-cartaz">
+      <h2 class="titulo-filmes">Filmes em Cartaz</h2>
+
+      <div class="filmes-wrapper">
+        <div class="filmes-container">
+          <div class="filme">
+            <img src="img/mario.png" alt="Mario">
+            <a href="https://youtu.be/cDNkh5WybZo?si=5iwxqncAmx2szS0H" target="_blank"><button>Trailer</button></a>
+          </div>
+          <div class="filme">
+            <img src="img/homemaranha.jpg" alt="Homem-Aranha">
+            <a href="https://youtu.be/bHzGeci_8wc?si=9PHPDAFu4M0kdZUb" target="_blank"><button>Trailer</button></a>
+          </div>
+          <div class="filme">
+            <img src="img/vingadores.jpg" alt="Vingadores">
+            <a href="https://youtu.be/PgrmbRID0eY?si=oxRT1YjkTsmSG8_g" target="_blank"><button>Trailer</button></a>
+          </div>
+          <div class="filme">
+            <img src="img/entidade.png" alt="A Entidade">
+            <a href="https://youtu.be/yv9oGgGDBQE?si=ukP5Cn_Dkx008Rgo" target="_blank"><button>Trailer</button></a>
+          </div>
+          <div class="filme">
+            <img src="img/eradogelo.jpg" alt="A Era do Gelo">
+            <a href="https://youtu.be/qxly5k7Zm2M?si=DHrsHZgrmzAPLIuL" target="_blank"><button>Trailer</button></a>
+          </div>
+          <div class="filme">
+            <img src="img/operacaonatal.png" alt="Operação Natal">
+            <a href="https://youtu.be/CZWxFe_d1r8?si=gYFvyDpN5X8eqUtO" target="_blank"><button>Trailer</button></a>
+          </div>
+          <div class="filme">
+            <img src="img/scary.avif" alt="Scary Movie">
+            <a href="https://www.youtube.com/watch?v=X6adA3qel8s" target="_blank"><button>Trailer</button></a>
+          </div>
+          <div class="filme">
+            <img src="img/vivaavida.jpg" alt="Viva - A Vida é uma Festa">
+            <a href="https://youtu.be/iLmZZV-Nkuk?si=5rYaJxhRhzA1-IDa" target="_blank"><button>Trailer</button></a>
+          </div>
         </div>
-        <nav>
-            <ul>
-                <li><a class="link-inicio" href="#">Início</a></li>
-                <li><a class="link-sobre" href="#">Sobre</a></li>
-                <li><a class="link-contato" href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="filmes-em-cartaz">
-            <h2 class="titulo-filmes">Filmes em Cartaz</h2>
+      </div>
 
-            <div class="filmes-wrapper">
-                <div class="filmes-container">
-                    <div class="filme"><img src="img/mario.png" alt="Mario"><button>Sobre</button></div>
-                    <div class="filme"><img src="img/homemaranha.jpg" alt="Homem-Aranha"><button>Sobre</button></div>
-                    <div class="filme"><img src="img/vingadores.jpg" alt="Vingadores"><button>Sobre</button></div>
-                    <div class="filme"><img src="img/entidade.png" alt="A Entidade"><button>Sobre</button></div>
-                    <div class="filme"><img src="img/eradogelo.jpg" alt="A Era do Gelo"><button>Sobre</button></div>
-                    <div class="filme"><img src="img/operacaonatal.png" alt="Operação Natal"><button>Sobre</button></div>
-                    <div class="filme"><img src="img/scary.avif" alt="Scary Movie"><button>Sobre</button></div>
-                    <div class="filme"><img src="img/vivaavida.jpg" alt="Viva - A Vida é uma Festa"><button>Sobre</button></div>
-                </div>
-            </div>
+      <div class="setas-container">
+        <button class="seta esquerda">&#10094;</button>
+        <button class="seta direita">&#10095;</button>
+      </div>
+    </section>
+  </main>
 
-            <div class="setas-container">
-                <button class="seta esquerda">&#10094;</button>
-                <button class="seta direita">&#10095;</button>
-            </div>
-        </section>
-    </main>
+  <footer>
+    <p>&copy; 2025 Cinema em Cartaz - Todos os direitos reservados</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 Cinema em Cartaz - Feito por Vitor Julião</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
