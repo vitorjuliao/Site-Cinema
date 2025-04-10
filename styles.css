@@ -1,4 +1,3 @@
-/* Reset e base */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@
     color: #ffffff;
   }
   
-  /* Header */
   header {
     background-color: #10882a;
     display: flex;
@@ -26,7 +24,6 @@
     color: #fff;
   }
   
-  /* Nav */
   nav ul {
     list-style: none;
     display: flex;
@@ -44,14 +41,12 @@
     color: #000;
   }
   
-  /* Título da seção */
   .titulo-filmes {
     font-size: 2rem;
     margin: 40px 0 20px;
     text-align: center;
   }
   
-  /* Wrapper para ocultar overflow */
   .filmes-wrapper {
     max-width: 1580px;
     margin: auto;
@@ -60,14 +55,12 @@
     padding: 0 40px;
   }
   
-  /* Container que desliza */
   .filmes-container {
     display: flex;
     gap: 10px;
     transition: transform 0.5s ease;
   }
   
-  /* Cada item de filme */
   .filme {
     min-width: 300px;
     background-color: #1e1e1e;
@@ -87,7 +80,6 @@
     object-fit: cover;
   }
   
-  /* Botão trailer */
   .filme button {
     width: 100%;
     padding: 12px;
