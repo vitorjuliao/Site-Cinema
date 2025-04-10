@@ -1,1 +1,1 @@
-Arquivo javascript feito pelo chatgpt (não interfere em nada no código apenas na animação ao passar os filmes)
+Arquivo javascript feito pelo chatgpt (não interfere em nada no código apenas na animação ao passar os filmes) e também a organização dos codigos com comando no Visual Studio
