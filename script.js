@@ -6,7 +6,6 @@ const direitaBtn = document.querySelector('.seta.direita');
 let filmeLargura = filmes[0].offsetWidth + 20;
 let index = 0;
 
-// Clona os filmes para dar efeito de loop
 filmes.forEach(filme => {
   const clone = filme.cloneNode(true);
   container.appendChild(clone);
